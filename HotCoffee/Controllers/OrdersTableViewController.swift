@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class OrderTableViewController: UITableViewController{
+    private var orderListVM = OrderListViewModel()
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         fetchOrders()
@@ -19,15 +21,37 @@ class OrderTableViewController: UITableViewController{
             fatalError("URL Not working.")
         }
         let resource = Resource<[Order]>(url: coffeOrderingURL)
-        WebService().load(resource: resource){ result in
+        WebService().load(resource: resource){[weak self] result in
             switch result{
             case .success(let orders):
-                print(orders)
+                self?.orderListVM.ordersViewModel = orders.map(OrderViewModel.init)
+                self?.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
             
         }
         
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.orderListVM.ordersViewModel.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let vm = orderListVM.orderAtRow(at: indexPath.row)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell") else{
+            fatalError("Cell not found.")
+        }
+        
+        cell.textLabel?.text = vm.coffeeName
+        cell.detailTextLabel?.text = vm.size
+        
+                
+        return cell
     }
 }
