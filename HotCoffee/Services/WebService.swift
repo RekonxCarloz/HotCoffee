@@ -28,13 +28,14 @@ class WebService{
                 completion(.failure(.domainError))
                 return
             }
-            if let result = try? JSONDecoder().decode(T.self, from: data){
+            let result = try? JSONDecoder().decode(T.self, from: data)
+            if let result = result{
                 DispatchQueue.main.async {
                     completion(.success(result))
                 }
             }else{
                 completion(.failure(.decodingError))
-            } 
+            }
         }.resume()
         
     }

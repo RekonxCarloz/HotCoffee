@@ -15,14 +15,14 @@ enum CoffeeTypes: String, Codable{
 }
 
 enum CoffeeSize: String, Codable{
-    case small
-    case medium
-    case large
+    case Small
+    case Medium
+    case Large
 }
 
-struct Order{
+struct Order: Codable{
     let name: String
-    let email: String
-    let type: CoffeeTypes
+    let coffeeName: CoffeeTypes
+    let total: Double
     let size: CoffeeSize
 }
