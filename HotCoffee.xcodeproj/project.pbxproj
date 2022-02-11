@@ -15,6 +15,7 @@
 		4C2647C527B1812C00700AA7 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2647C427B1812C00700AA7 /* OrdersTableViewController.swift */; };
 		4C2647C727B1814100700AA7 /* AddOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2647C627B1814100700AA7 /* AddOrdersViewController.swift */; };
 		4C2647CA27B18B2A00700AA7 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2647C927B18B2A00700AA7 /* WebService.swift */; };
+		4C83BC2527B2D8A500FD1BFB /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83BC2427B2D8A400FD1BFB /* AddCoffeeOrderViewModel.swift */; };
 		4CC1FC1427B1922900E0F4E3 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1FC1327B1922900E0F4E3 /* Order.swift */; };
 		4CC1FC1727B1F68500E0F4E3 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1FC1627B1F68500E0F4E3 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		4C2647C427B1812C00700AA7 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
 		4C2647C627B1814100700AA7 /* AddOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrdersViewController.swift; sourceTree = "<group>"; };
 		4C2647C927B18B2A00700AA7 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		4C83BC2427B2D8A400FD1BFB /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderViewModel.swift; sourceTree = "<group>"; };
 		4CC1FC1327B1922900E0F4E3 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		4CC1FC1627B1F68500E0F4E3 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				4CC1FC1627B1F68500E0F4E3 /* OrderViewModel.swift */,
+				4C83BC2427B2D8A400FD1BFB /* AddCoffeeOrderViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC1FC1427B1922900E0F4E3 /* Order.swift in Sources */,
+				4C83BC2527B2D8A500FD1BFB /* AddCoffeeOrderViewModel.swift in Sources */,
 				4C2647B027B0DF6800700AA7 /* AppDelegate.swift in Sources */,
 				4C2647B227B0DF6800700AA7 /* SceneDelegate.swift in Sources */,
 				4C2647C527B1812C00700AA7 /* OrdersTableViewController.swift in Sources */,
